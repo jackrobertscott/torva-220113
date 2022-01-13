@@ -1,0 +1,47 @@
+# dependencies
+node_modules
+yarn.lock
+package-lock.json
+
+# testing
+coverage
+
+# production
+build
+dist
+dist-ssr
+lib
+
+# mac
+.DS_Store
+
+# environment
+.env
+*.env*
+!.env.example
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+report.*.json
+
+# lock file
+package-lock.json
+
+# documentation
+.docz
+.cache
+
+# yarn version
+.yarn
+
+# deployment
+.vercel
+
+# vite
+*.local
+
+# editor
+.vscode
