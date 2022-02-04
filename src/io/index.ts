@@ -6,6 +6,7 @@ import {ioCustom, TioCustom} from './ioCustom'
 import {ioDate, TioDate} from './ioDate'
 import {ioEnum, TioEnum} from './ioEnum'
 import {ioLazy, TioLazy} from './ioLazy'
+import {ioNull, TioNull} from './ioNull'
 import {ioNumber, TioNumber} from './ioNumber'
 import {ioObject, TioObject} from './ioObject'
 import {ioOptional, TioOptional} from './ioOptional'
@@ -34,6 +35,7 @@ export type TioAll =
   | TioCustom
   | TioDate
   | TioEnum
+  | TioNull
   | TioNumber
   | TioLazy
   | TioObject
@@ -51,6 +53,7 @@ export const io = {
   date: ioDate,
   enum: ioEnum,
   lazy: ioLazy,
+  null: ioNull,
   number: ioNumber,
   object: ioObject,
   optional: ioOptional,
