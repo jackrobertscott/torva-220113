@@ -1,9 +1,12 @@
 {
   "name": "torva",
-  "version": "0.3.2",
+  "version": "0.3.4",
   "license": "UNLICENSED",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "dev": "nodemon",
     "build": "rm -rf lib && tsc",
