@@ -3,7 +3,7 @@ import {TioAll, TioValue, Tio_} from '.'
  *
  */
 export interface TioOptional<T extends TioAll = TioAll>
-  extends Tio_<'optional', TioValue<T> | undefined> {}
+  extends Tio_<'optional', TioValue<T> | undefined | null> {}
 /**
  *
  */
