@@ -12,7 +12,6 @@ export const ioUser = io.object({
   created: io.date(),
   updated: io.date(),
   admin: io.optional(io.boolean()),
-  mode: io.optional(ioUserMode),
   firstName: io.string(),
   lastName: io.string(),
   email: io.string(),
