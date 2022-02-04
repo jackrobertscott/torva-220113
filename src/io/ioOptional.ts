@@ -16,7 +16,7 @@ export function ioOptional<T extends TioAll = TioAll>(
      *
      */
     validate(value) {
-      if (value === undefined) return {ok: true, value}
+      if (value === undefined || value === null) return {ok: true, value}
       if (!ofType)
         throw new Error('Optional schema not provided prior to validate.')
       return ofType.validate(value)
