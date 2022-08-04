@@ -1,12 +1,13 @@
-import {Tio_} from '.'
+import {TypeIo_} from '.'
 /**
  *
  */
-export interface TioEnum<C extends string = string> extends Tio_<'enum', C> {}
+export interface TypeIoEnum<C extends string = string>
+  extends TypeIo_<'enum', C> {}
 /**
  *
  */
-export function ioEnum<C extends string>(choices: C[]): TioEnum<C> {
+export function ioEnum<C extends string>(choices: C[]): TypeIoEnum<C> {
   return {
     _type: 'enum',
     /**

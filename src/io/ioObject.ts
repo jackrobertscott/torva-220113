@@ -1,21 +1,25 @@
-import {TioValue, Tio_} from '.'
+import {TypeIoValue, TypeIo_} from '.'
 import {OptionalUndefined} from '../utils/types'
 /**
  *
  */
-export interface TioObject<F extends Record<string, any> = Record<string, any>>
-  extends Tio_<'object', OptionalUndefined<{[K in keyof F]: TioValue<F[K]>}>> {
+export interface TypeIoObject<
+  F extends Record<string, any> = Record<string, any>
+> extends TypeIo_<
+    'object',
+    OptionalUndefined<{[K in keyof F]: TypeIoValue<F[K]>}>
+  > {
   extend<X extends Record<string, any>>(
     fields: X
-  ): TioObject<Omit<F, keyof X> & X>
+  ): TypeIoObject<Omit<F, keyof X> & X>
 }
 /**
  *
  */
 export function ioObject<
   F extends Record<string, any> = Record<string, any>
-  // enum types break with: F extends Record<string, TioAll> = Record<string, TioAll>,
->(fields: F): TioObject<F> {
+  // enum types break with: F extends Record<string, TypeIoAll> = Record<string, TypeIoAll>,
+>(fields: F): TypeIoObject<F> {
   return {
     _type: 'object',
     /**

@@ -1,12 +1,12 @@
-import {Tio_} from '.'
+import {TypeIo_} from '.'
 /**
  *
  */
-export interface TioBoolean extends Tio_<'boolean', boolean> {}
+export interface TypeIoBoolean extends TypeIo_<'boolean', boolean> {}
 /**
  *
  */
-export function ioBoolean(): TioBoolean {
+export function ioBoolean(): TypeIoBoolean {
   return {
     _type: 'boolean',
     /**

@@ -1,13 +1,13 @@
-import {Tio_} from '.'
+import {TypeIo_} from '.'
 import {regex} from '../utils/regex'
 /**
  *
  */
-export interface TioColor extends Tio_<'color', string> {}
+export interface TypeIoColor extends TypeIo_<'color', string> {}
 /**
  *
  */
-export function ioColor(): TioColor {
+export function ioColor(): TypeIoColor {
   return {
     _type: 'color',
     /**

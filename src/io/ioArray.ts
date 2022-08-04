@@ -1,13 +1,15 @@
-import {TioAll, TioValue, Tio_} from '.'
+import {TypeIoAll, TypeIoValue, TypeIo_} from '.'
 /**
  *
  */
-export interface TioArray<T extends TioAll = TioAll>
-  extends Tio_<'array', Array<TioValue<T>>> {}
+export interface TypeIoArray<T extends TypeIoAll = TypeIoAll>
+  extends TypeIo_<'array', Array<TypeIoValue<T>>> {}
 /**
  *
  */
-export function ioArray<T extends TioAll = TioAll>(ofType: T): TioArray<T> {
+export function ioArray<T extends TypeIoAll = TypeIoAll>(
+  ofType: T
+): TypeIoArray<T> {
   return {
     _type: 'array',
     /**

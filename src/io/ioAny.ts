@@ -1,12 +1,12 @@
-import {Tio_} from '.'
+import {TypeIo_} from '.'
 /**
  *
  */
-export interface TioAny extends Tio_<'any', any> {}
+export interface TypeIoAny extends TypeIo_<'any', any> {}
 /**
  *
  */
-export function ioAny(): TioAny {
+export function ioAny(): TypeIoAny {
   return {
     _type: 'any',
     /**

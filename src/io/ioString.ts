@@ -1,9 +1,9 @@
-import {Tio_} from '.'
+import {TypeIo_} from '.'
 import {regex} from '../utils/regex'
 /**
  *
  */
-export interface TioStringOptions {
+export interface TypeIoStringOptions {
   regex?: RegExp
   trim?: boolean
   email?: boolean
@@ -13,17 +13,17 @@ export interface TioStringOptions {
 /**
  *
  */
-export interface TioString extends Tio_<'string', string> {
-  regex(value: RegExp): TioString
-  trim(): TioString
-  email(): TioString
-  nowhitespace(): TioString
-  emptyok(): TioString
+export interface TypeIoString extends TypeIo_<'string', string> {
+  regex(value: RegExp): TypeIoString
+  trim(): TypeIoString
+  email(): TypeIoString
+  nowhitespace(): TypeIoString
+  emptyok(): TypeIoString
 }
 /**
  *
  */
-export function ioString(options?: TioStringOptions): TioString {
+export function ioString(options?: TypeIoStringOptions): TypeIoString {
   return {
     _type: 'string',
     /**

@@ -1,12 +1,12 @@
-import {Tio_} from '.'
+import {TypeIo_} from '.'
 /**
  *
  */
-export interface TioDate extends Tio_<'date', string> {}
+export interface TypeIoDate extends TypeIo_<'date', string> {}
 /**
  *
  */
-export function ioDate(): TioDate {
+export function ioDate(): TypeIoDate {
   return {
     _type: 'date',
     /**

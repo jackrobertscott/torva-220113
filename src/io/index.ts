@@ -1,46 +1,46 @@
-import {ioAny, TioAny} from './ioAny'
-import {ioArray, TioArray} from './ioArray'
-import {ioBoolean, TioBoolean} from './ioBoolean'
-import {ioColor, TioColor} from './ioColor'
-import {ioCustom, TioCustom} from './ioCustom'
-import {ioDate, TioDate} from './ioDate'
-import {ioEnum, TioEnum} from './ioEnum'
-import {ioLazy, TioLazy} from './ioLazy'
-import {ioNull, TioNull} from './ioNull'
-import {ioNumber, TioNumber} from './ioNumber'
-import {ioObject, TioObject} from './ioObject'
-import {ioOptional, TioOptional} from './ioOptional'
-import {ioString, TioString} from './ioString'
+import {ioAny, TypeIoAny} from './ioAny'
+import {ioArray, TypeIoArray} from './ioArray'
+import {ioBoolean, TypeIoBoolean} from './ioBoolean'
+import {ioColor, TypeIoColor} from './ioColor'
+import {ioCustom, TypeIoCustom} from './ioCustom'
+import {ioDate, TypeIoDate} from './ioDate'
+import {ioEnum, TypeIoEnum} from './ioEnum'
+import {ioLazy, TypeIoLazy} from './ioLazy'
+import {ioNull, TypeIoNull} from './ioNull'
+import {ioNumber, TypeIoNumber} from './ioNumber'
+import {ioObject, TypeIoObject} from './ioObject'
+import {ioOptional, TypeIoOptional} from './ioOptional'
+import {ioString, TypeIoString} from './ioString'
 /**
  *
  */
-export interface Tio_<K extends string = string, T = any> {
+export interface TypeIo_<K extends string = string, T = any> {
   _type: K
-  validate(value: T): TioValidateReturn<T>
+  validate(value: T): TypeIoValidateReturn<T>
 }
 /**
  *
  */
-export type TioValidateReturn<T> =
+export type TypeIoValidateReturn<T> =
   | {ok: true; value: T}
   | {ok: false; error: string}
 /**
  *
  */
-export type TioAll =
-  | TioAny
-  | TioArray
-  | TioBoolean
-  | TioColor
-  | TioCustom
-  | TioDate
-  | TioEnum
-  | TioNull
-  | TioNumber
-  | TioLazy
-  | TioObject
-  | TioOptional
-  | TioString
+export type TypeIoAll =
+  | TypeIoAny
+  | TypeIoArray
+  | TypeIoBoolean
+  | TypeIoColor
+  | TypeIoCustom
+  | TypeIoDate
+  | TypeIoEnum
+  | TypeIoNull
+  | TypeIoNumber
+  | TypeIoLazy
+  | TypeIoObject
+  | TypeIoOptional
+  | TypeIoString
 /**
  *
  */
@@ -62,6 +62,6 @@ export const io = {
 /**
  *
  */
-export type TioValue<T extends Tio_> = T extends Tio_<string, infer X>
+export type TypeIoValue<T extends TypeIo_> = T extends TypeIo_<string, infer X>
   ? X
   : never

@@ -1,15 +1,15 @@
-import {TioAll, TioValue, Tio_} from '.'
+import {TypeIoAll, TypeIoValue, TypeIo_} from '.'
 /**
  *
  */
-export interface TioOptional<T extends TioAll = TioAll>
-  extends Tio_<'optional', TioValue<T> | undefined> {}
+export interface TypeIoOptional<T extends TypeIoAll = TypeIoAll>
+  extends TypeIo_<'optional', TypeIoValue<T> | undefined> {}
 /**
  *
  */
-export function ioOptional<T extends TioAll = TioAll>(
+export function ioOptional<T extends TypeIoAll = TypeIoAll>(
   ofType: T
-): TioOptional<T> {
+): TypeIoOptional<T> {
   return {
     _type: 'optional',
     /**

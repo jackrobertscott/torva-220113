@@ -1,12 +1,12 @@
-import {Tio_} from '.'
+import {TypeIo_} from '.'
 /**
  *
  */
-export interface TioNumber extends Tio_<'number', number> {}
+export interface TypeIoNumber extends TypeIo_<'number', number> {}
 /**
  *
  */
-export function ioNumber(): TioNumber {
+export function ioNumber(): TypeIoNumber {
   return {
     _type: 'number',
     /**

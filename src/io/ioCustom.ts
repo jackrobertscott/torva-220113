@@ -1,14 +1,14 @@
-import {TioValidateReturn, Tio_} from '.'
+import {TypeIoValidateReturn, TypeIo_} from '.'
 /**
  *
  */
-export interface TioCustom<T = any> extends Tio_<'custom', T> {}
+export interface TypeIoCustom<T = any> extends TypeIo_<'custom', T> {}
 /**
  *
  */
 export function ioCustom<T>(
-  validate: (value: T) => TioValidateReturn<T>
-): TioCustom<T> {
+  validate: (value: T) => TypeIoValidateReturn<T>
+): TypeIoCustom<T> {
   return {
     _type: 'custom',
     /**

@@ -1,13 +1,15 @@
-import {TioAll, TioValue, Tio_} from '.'
+import {TypeIoAll, TypeIoValue, TypeIo_} from '.'
 /**
  *
  */
-export interface TioNull<T extends TioAll = TioAll>
-  extends Tio_<'null', TioValue<T> | null> {}
+export interface TypeIoNull<T extends TypeIoAll = TypeIoAll>
+  extends TypeIo_<'null', TypeIoValue<T> | null> {}
 /**
  *
  */
-export function ioNull<T extends TioAll = TioAll>(ofType: T): TioNull<T> {
+export function ioNull<T extends TypeIoAll = TypeIoAll>(
+  ofType: T
+): TypeIoNull<T> {
   return {
     _type: 'null',
     /**

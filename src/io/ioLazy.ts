@@ -1,15 +1,15 @@
-import {TioAll, TioValue, Tio_} from '.'
+import {TypeIoAll, TypeIoValue, TypeIo_} from '.'
 /**
  *
  */
-export interface TioLazy<T extends TioAll = TioAll>
-  extends Tio_<'lazy', TioValue<T>> {}
+export interface TypeIoLazy<T extends TypeIoAll = TypeIoAll>
+  extends TypeIo_<'lazy', TypeIoValue<T>> {}
 /**
  *
  */
-export function ioLazy<T extends TioAll = TioAll>(
+export function ioLazy<T extends TypeIoAll = TypeIoAll>(
   callback: () => T
-): TioLazy<T> {
+): TypeIoLazy<T> {
   return {
     _type: 'lazy',
     /**

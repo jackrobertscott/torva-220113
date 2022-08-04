@@ -3,7 +3,7 @@
 TypeScript validation library.
 
 ```ts
-import {io, TioValue} from 'torva'
+import {io, TypeIoValue} from 'torva'
 /**
  *
  */
@@ -23,7 +23,7 @@ export const ioUser = io.object({
 /**
  *
  */
-export type TUser = TioValue<typeof ioUser>
+export type TypeUser = TypeIoValue<typeof ioUser>
 ```
 
-Made By Jack :)
+Made By Jack
